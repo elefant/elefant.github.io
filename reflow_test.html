@@ -3,10 +3,11 @@
 <body>
 
 <p id="demo" onclick="myFunction()">Click me to change my HTML content (innerHTML).</p>
+<div id="content"></div>
 
 <script>
 function myFunction() {
-    document.getElementById("demo").innerHTML = "Paragraph changed!";
+    document.getElementById("content").innerHTML = '<a href="http://mlb.com" id="link">Testing\<\/a>';
 }
 </script>
 
