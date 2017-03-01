@@ -15,7 +15,7 @@ function Solution2(root) {
     var nextLevelQ = [];
     q.forEach(function(n) {
     	if (n.left) {
-      	nextLevelQ.push(n.left);
+        nextLevelQ.push(n.left);
       }
       if (n.right) {
         nextLevelQ.push(n.right);
