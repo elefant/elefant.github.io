@@ -1,13 +1,13 @@
 // Linear time and constant space.
 function Solution1(n) {
-	var dp = [0, 1];
+  var dp = [0, 1];
   if (n < 2) {
     return dp[n];
   }
   
   var sol;
   for (var i = 2; i <= n; i++) {
-  	// Before:
+    // Before:
     //   dp[1] => f(n-1)
     //   dp[0] => f(n-2) 
     
