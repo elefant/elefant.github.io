@@ -10,7 +10,7 @@ function Solution2(root) {
   var sol = []; // sol[i] contains nodes which depth are i. Root's depth is 0.
   var q = [root];
   while (q.length !== 0) {
-  	sol.push(q.slice(0)); // Push the clone 'nextLevelQ' to sol.
+    sol.push(q.slice(0)); // Push the clone 'nextLevelQ' to sol.
   
     var nextLevelQ = [];
     q.forEach(function(n) {
