@@ -4,7 +4,7 @@
 // }
 function Solution2(root) {
   if (!root) {
-  	return [];
+    return [];
   }
   
   var sol = []; // sol[i] contains nodes which depth are i. Root's depth is 0.
