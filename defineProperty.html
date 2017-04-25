@@ -1,0 +1,15 @@
+<html><body>
+  <script>
+    var name = "Foo";
+    var desc = {configurable:true, writable:true, enumerable:false, value:null};
+    function f() {
+        var t = new Date;
+        for (var i=0; i<1000000; i++) {
+          globalO = {};
+          Object.defineProperty(globalO, name, desc);
+        }
+      document.write(new Date - t);
+    }
+    f();
+  </script>
+</body></html>
