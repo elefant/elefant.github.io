@@ -2,21 +2,24 @@
 <html>
 <head>
   <script>
-    function testCssRules() {
+    function testCssRules(cssUriPrefix) {
       for (var i = 0; i < document.styleSheets.length; i++) {
-        console.log("haha:" + document.styleSheets[i].href);
-        console.log("haha:" + document.styleSheets[i].cssRules);
+        if (document.styleSheets[i].href.startsWith(cssUriPrefix)) {
+          console.log("haha:" + document.styleSheets[i].href);
+          console.log("haha:" + document.styleSheets[i].cssRules);
+          console.log("");
+          break;
+        }
       }
     }
   </script>
   
   <link rel="stylesheet" type="text/css" href="data:text/css,.green-text{color:rgb(0, 255, 0)};"
-        onload="testCssRules();">
-    
-  <!--
+        onload="testCssRules('data:');">
+  
   <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/Tags/styles.css"
-        onload="testCssRules();">
-  -->
+        onload="testCssRules('https://');">  
+
 </head>
 <body>
 
