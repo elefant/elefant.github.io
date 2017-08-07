@@ -10,10 +10,11 @@
 
 </body>
   <script>
-    document.onload = function() {
+    function testCssRules() {
       for (var i = 0; i < document.styleSheets.length; i++) {
         console.log("haha:" + document.styleSheets[i].href);
       }
-    };
+    }
+    setTimeout(testCssRules, 5);
   </script>
 </html>
