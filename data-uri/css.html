@@ -9,4 +9,11 @@
 <p>Me too!</p>
 
 </body>
+  <script>
+    document.onload = function() {
+      for (var i = 0; i < document.styleSheets.length; i++) {
+        console.log("haha:" + document.styleSheets[i].href);
+      }
+    };
+  </script>
 </html>
