@@ -15,7 +15,7 @@
   // The .ready promise resolves when all fonts that have been previously requested
   // are loaded and layout operations are complete.
   document.fonts.ready.then(function() {
-    console.log('There are', document.fonts.size, 'FontFaces loaded.\n');
+    document.write('There are', document.fonts.size, 'FontFaces loaded.\n');
   });
 </script>
 </head></html>
