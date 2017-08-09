@@ -23,7 +23,9 @@
     link.onload = addText;
     document.head.appendChild(link);
     */
-    document.onload = addText;
+    document.onload = function() {
+      addText();
+    };
     
     // Observe font onload event.
     document.fonts.ready.then(function() {
