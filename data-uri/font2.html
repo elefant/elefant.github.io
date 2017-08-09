@@ -17,6 +17,9 @@
     document.fonts.ready.then(function() {
       console.log('hahahahah: ' + document.fonts.check('1em Roboto'));
     });
+    document.fonts.onloadingdone = function (fontFaceSetEvent) {
+      alert('onloadingdone we have ' + fontFaceSetEvent.fontfaces.length + ' font faces loaded');
+    };
     
   </script>
 </head>
