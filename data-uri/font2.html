@@ -20,6 +20,9 @@
     document.fonts.onloadingdone = function (fontFaceSetEvent) {
       alert('onloadingdone we have ' + fontFaceSetEvent.fontfaces.length + ' font faces loaded');
     };
+    document.fonts.onloadingerror = function () {
+      alert('onloadingerror');
+    };
     
   </script>
 </head>
