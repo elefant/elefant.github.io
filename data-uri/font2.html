@@ -1,0 +1,24 @@
+<html>
+<head>
+  <script>
+    // Import css
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    //link.href = "data:text/css,.green-text{color:rgb(0, 255, 0)}";
+    link.href = "https://fonts.googleapis.com/css?family=Roboto:400,700";
+    link.onload = function() {
+      var text = document.createElement('p');
+      text.style = 'font-family: Roboto';
+      document.body.appendChild(text);
+    };
+    document.head.appendChild(link);
+    
+    // Observe font onload event.
+    document.fonts.ready.then(function() {
+      document.write('hahahahah!');
+    });
+    
+  </script>
+</head>
+<body></body>
+</html>
