@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset=utf-8>
+    <title>Origin of document produced from a 'data:' URL</title>
+  </head>
+  <body>
+    <script>
+        var i = document.createElement('iframe');
+        i.src = "data:text/html,<script>" +
+                "  window.parent.postMessage('Hello!', '*');" +
+                "</scr" + "ipt>";
+
+        window.addEventListener("message", function (e) {
+          /*
+          assert_equals(e.origin, "null", "Messages sent from a 'data:' URL should have an opaque origin (which serializes to 'null').");
+          assert_throws("SecurityError", function () {
+            var couldAccessCrossOriginProperty = e.source.location.href;
+          }, "The 'data:' frame should be cross-origin: 'window.location.href'");
+
+          assert_equals(i.contentDocument, "null", "The 'data:' iframe.contentDocument should be unable to access.");
+          */
+          console.log("i.contentDocument: " + i.contentDocument);
+        });
+
+        document.body.appendChild(i);
+    </script>
+  </body>
+</html>
