@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <script>
+    window.onmessage = function (e) { 
+      var couldAccess;
+      try {
+        couldAccess = e.source.location;
+      } catch (ex) {
+        couldAccess = false;
+      }
+      document.body.innerHTML = "The origin of a `data:` frame is: " + e.origin + ", and access was " + (couldAccess ? "allowed" : "denied") + ".";
+    };
+  </script>
+  <iframe src="data:text/html,<script>top.postMessage('hi!', '*');</script>"></iframe>
+</script>
+
+</body>
+</html>
