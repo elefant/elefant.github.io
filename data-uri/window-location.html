@@ -11,7 +11,7 @@
     window.onmessage = function (e) { 
       var couldAccess;
       try {
-        couldAccess = e.source.location;
+        couldAccess = e.source.location.href;
       } catch (ex) {
         couldAccess = false;
       }
